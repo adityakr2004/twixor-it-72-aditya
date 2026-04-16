@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>snapdeal clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="container header-flex">
+        <div class="logo">
+          <img
+            src="assets/snapdeal-logos.png"
+            alt="Snapdeal Logo"
+            class="snapdeal-logo-img"
+          />
+        </div>
+        <div class="search-container">
+          <div class="search-box">
+            <i
+              class="fas fa-search search-icon"
+              style="color: #444; margin-left: 15px"
+            ></i>
+            <input type="text" placeholder="Search for Brands & Products" />
+          </div>
+        </div>
+        <div class="user-actions">
+          <div class="user-action-item" id="login-btn">
+            <i class="far fa-user-circle"></i>
+            <span>Login</span>
+          </div>
+          <div class="user-action-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>My Cart</span>
+          </div>
+          <button class="header-download-btn">
+            <i class="fas fa-arrow-up-right-from-square"></i>
+            <div class="btn-text">Download<br />App</div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- login functionality -->
+    <div class="user-action-item" id="login-btn">
+      <!-- DROPDOWN -->
+      <div class="login-dropdown" id="login-dropdown">
+        <div class="dropdown-item">
+          <i class="far fa-user"></i>
+          <span>Your Account</span>
+        </div>
+
+        <div class="dropdown-item">
+          <i class="far fa-box"></i>
+          <span>Your Orders</span>
+        </div>
+
+        <hr />
+
+        <div class="new-user">
+          <p>If you are a new user</p>
+          <a href="#">Register</a>
+        </div>
+
+        <button class="login-btn">LOGIN</button>
+      </div>
+    </div>
+    <nav class="categories-nav" style="position: relative">
+      <div class="container dashed-separator"></div>
+      <div class="container nav-container-flex">
+        <ul class="category-list">
+          <li class="has-dropdown">
+            <a href="#">
+              <img src="assets/mens-fashion.jpg" class="cat-img" alt="Men" />
+              <span>Men's Fashion</span>
+              <i class="fas fa-chevron-down" style="font-size: 10px"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="container dropdown-inner">
+                <div>
+                  <h4 class="dropdown-title">Clothing</h4>
+                  <ul>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Casual Shirts</a></li>
+                    <li><a href="#">Formal Shirts</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="dropdown-title">Footwear</h4>
+                  <ul>
+                    <li><a href="#">Sports Shoes</a></li>
+                    <li><a href="#">Sneakers</a></li>
+                    <li><a href="#">Loafers</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">
+              <img
+                src="assets/womens-fashion.jpg"
+                class="cat-img"
+                alt="Women"
+              />
+              <span>Women's Fashion</span>
+              <i class="fas fa-chevron-down" style="font-size: 10px"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div
+                class="container dropdown-inner"
+                style="justify-content: space-between"
+              >
+                <div style="display: flex; gap: 40px">
+                  <div>
+                    <h4 class="dropdown-title">Ethnic Wear</h4>
+                    <ul>
+                      <li><a href="#">Kurtas</a></li>
+                      <li><a href="#">Sarees</a></li>
+                      <li><a href="#">Lehengas</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="dropdown-title">Western Wear</h4>
+                    <ul>
+                      <li><a href="#">Tops</a></li>
+                      <li><a href="#">Dresses</a></li>
+                      <li><a href="#">Denims</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">
+              <img src="assets/home-kitchen.png" class="cat-img" alt="Home" />
+              <span>Home & Kitchen</span>
+              <i class="fas fa-chevron-down" style="font-size: 10px"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div class="container dropdown-inner">
+                <div>
+                  <h4 class="dropdown-title">Kitchenware</h4>
+                  <ul>
+                    <li><a href="#">Cookware</a></li>
+                    <li><a href="#">Storage</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/kids-fashion.jpg" class="cat-img" alt="Kids" />
+              <span>Kid's Fashion</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="assets/health-and-beauty.jpg"
+                class="cat-img"
+                alt="Beauty"
+              />
+              <span>Beauty & Health</span>
+            </a>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">
+              <img
+                src="assets/automoters.png"
+                class="cat-img"
+                alt="Automotives"
+              />
+              <span>Automotives</span>
+              <i class="fas fa-chevron-down" style="font-size: 10px"></i>
+            </a>
+            <div class="dropdown-menu mega-menu">
+              <div
+                class="container dropdown-inner"
+                style="justify-content: space-between"
+              >
+                <div style="display: flex; gap: 40px">
+                  <div>
+                    <h4 class="dropdown-title">Car Accessories</h4>
+                    <ul>
+                      <li><a href="#">Car Covers</a></li>
+                      <li><a href="#">Seat Covers</a></li>
+                      <li><a href="#">Air Fresheners</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/mobiles.jpg" class="cat-img" alt="Mobile" />
+              <span>Mobile Accessories</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="container">
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+          <button class="slider-btn prev" id="hero-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="hero-carousel-container" id="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+              <img
+                src="assets/mens-fashion.jpg"
+                alt="Hero Background 1"
+                class="hero-bg"
+              />
+              <div class="hero-text-box">
+                <h3>Men's Tees</h3>
+                <p>UNDER</p>
+                <h2>₹249</h2>
+                <button class="shop-now-btn">SHOP NOW</button>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+              <img
+                src="assets/womens-fashion.jpg"
+                alt="Hero Background 2"
+                class="hero-bg"
+              />
+              <div class="hero-text-box">
+                <h3>Women's Fashion</h3>
+                <p>FLAT</p>
+                <h2>50% OFF</h2>
+                <button class="shop-now-btn">SHOP NOW</button>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+              <img
+                src="assets/electronics.jpg"
+                alt="Hero Background 3"
+                class="hero-bg"
+              />
+              <div class="hero-text-box">
+                <h3>Electronics</h3>
+                <p>STARTING AT</p>
+                <h2>₹999</h2>
+                <button class="shop-now-btn">SHOP NOW</button>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn next" id="hero-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="slider-dots" id="hero-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+        </section>
+
+        <!-- Feature Highlights -->
+        <section class="feature-highlights">
+          <div class="feature-card">
+            <i class="fas fa-truck feature-icon"></i>
+            <div class="feature-text">
+              <h4>Free Delivery</h4>
+              <p>On all orders</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-redo feature-icon"></i>
+            <div class="feature-text">
+              <h4>Easy Returns</h4>
+              <p>7 days return policy</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-tag feature-icon"></i>
+            <div class="feature-text">
+              <h4>Great Quality</h4>
+              <p>At Best Prices</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Deal Of The Day -->
+        <section class="deal-of-the-day">
+          <h2 class="section-title">Deal Of The Day</h2>
+          <div class="product-carousel-wrapper">
+            <button class="carousel-btn prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="product-horizontal-list">
+              <!-- Product 1 -->
+              <div class="deal-card border-card">
+                <div class="discount-badge">MIN 40% OFF</div>
+                <img src="assets/style-2sets.jpg" alt="Men's Shorts" />
+                <div class="deal-info">
+                  <p class="deal-title">Men's Top Bottom Sets</p>
+                </div>
+              </div>
+              <!-- Product 2 -->
+              <div class="deal-card border-card">
+                <div class="discount-badge">UP TO 60% OFF</div>
+                <img src="assets/nike-shoes.jpg" alt="Shoes" />
+                <div class="deal-info">
+                  <p class="deal-title">Sports Shoes</p>
+                </div>
+              </div>
+              <!-- Product 3 -->
+              <div class="deal-card border-card">
+                <div class="discount-badge">UP TO 70% OFF</div>
+                <img src="assets/style-shot.jpg" alt="Shot" />
+                <div class="deal-info">
+                  <p class="deal-title">Shot</p>
+                </div>
+              </div>
+              <!-- Product 4 -->
+              <div class="deal-card border-card">
+                <div class="discount-badge">MIN 50% OFF</div>
+                <img src="assets/womens-hand-bag.jpg" alt="Tote Bag" />
+                <div class="deal-info">
+                  <p class="deal-title">Women's Handbags</p>
+                </div>
+              </div>
+              <!-- Product 5 -->
+              <div class="deal-card border-card">
+                <div class="discount-badge">UP TO 80% OFF</div>
+                <img src="assets/kurta-sets.jpg" alt="Designer kurta Sets" />
+                <div class="deal-info">
+                  <p class="deal-title">Designer kurta Sets</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- Promotional Banner -->
+        <section class="promo-banner">
+          <img src="assets/nike-shoes.jpg" alt="Shoe Promo" class="promo-img" />
+          <div class="promo-content">
+            <p class="brand-text">Nike</p>
+            <h3>UP TO 65% OFF</h3>
+            <button class="shop-now-btn promo-btn">SHOP NOW</button>
+          </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="new-arrivals">
+          <h2 class="section-title">New Arrivals</h2>
+          <div class="grid-4-cols">
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img src="assets/herbal-oil.jpg" alt="Hair Oil" />
+                <span class="rating-badge"
+                  ><i class="fas fa-star"></i> 4.5</span
+                >
+              </div>
+              <div class="product-details">
+                <p class="product-name">Herbal Hair Oil 200ml</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 399</span>
+                  <span class="current-price">Rs. 199</span>
+                  <span class="discount-text">50% OFF</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img src="assets/kurta-sets.jpg" alt="Designer kurta Sets" />
+                <span class="rating-badge">
+                  <i class="fas fa-star"></i> 4.2
+                </span>
+              </div>
+              <div class="product-details">
+                <p class="product-name">Designer kurta Sets</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 1299</span>
+                  <span class="current-price">Rs. 599</span>
+                  <span class="discount-text">53% OFF</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img src="assets/saree.jpg" alt="Saree" />
+                <span class="rating-badge"
+                  ><i class="fas fa-star"></i> 4.0</span
+                >
+              </div>
+              <div class="product-details">
+                <p class="product-name">Floral Print Saree</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 1599</span>
+                  <span class="current-price">Rs. 499</span>
+                  <span class="discount-text">68% OFF</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img src="assets/lofar.jpg" alt="Black Loafers" />
+                <span class="rating-badge"
+                  ><i class="fas fa-star"></i> 4.7</span
+                >
+              </div>
+              <div class="product-details">
+                <p class="product-name">Men's Black Formal Loafers</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 1999</span>
+                  <span class="current-price">Rs. 899</span>
+                  <span class="discount-text">55% OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- App Download Section -->
+        <section class="app-download-section">
+          <div class="app-left">
+            <h2>
+              Scan to Download<br /><span class="snapdeal-red">Snapdeal</span>
+              App Now!
+            </h2>
+            <ul class="app-benefits">
+              <li><i class="fas fa-check-circle"></i> Latest Deals & Offers</li>
+              <li><i class="fas fa-check-circle"></i> Track Your Orders</li>
+              <li>
+                <i class="fas fa-check-circle"></i> Seamless Mobile Experience
+              </li>
+            </ul>
+            <div class="qr-code">
+              <img src="assets/qr-img.png" alt="QR Code" width="120" />
+            </div>
+          </div>
+          <div class="app-right">
+            <!-- Dummy phone mockups -->
+            <img src="assets/mobile.png" alt="App Mockups" class="mockup-img" />
+          </div>
+        </section>
+
+        <!-- Explore More On Snapdeal -->
+        <section class="explore-more">
+          <h2 class="section-title">Explore More On Snapdeal</h2>
+          <div class="grid-5-cols" id="explore-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img
+                  src="assets/style-2sets.jpg"
+                  alt="US Polo Men Blue Solid T-Shirt"
+                />
+                <span class="rating-badge"
+                  ><i class="fas fa-star"></i> 4.2</span
+                >
+              </div>
+              <div class="product-details">
+                <p class="product-name">US Polo Men Solid T-Shirt</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 1499</span>
+                  <span class="current-price">Rs. 899</span>
+                  <span class="discount-text">40% OFF</span>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img src="assets/style-shot.jpg" alt="Sparx Men Brown" />
+                <span class="rating-badge"
+                  ><i class="fas fa-star"></i> 4.3</span
+                >
+              </div>
+              <div class="product-details">
+                <p class="product-name">Sparx Men Brown</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 599</span>
+                  <span class="current-price">Rs. 399</span>
+                  <span class="discount-text">33% OFF</span>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img src="assets/nike-shoes.jpg" alt="Nike red Sandals" />
+                <span class="rating-badge"
+                  ><i class="fas fa-star"></i> 4.5</span
+                >
+              </div>
+              <div class="product-details">
+                <p class="product-name">Nike red Sandals</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 1999</span>
+                  <span class="current-price">Rs. 950</span>
+                  <span class="discount-text">52% OFF</span>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img src="assets/mens-fashion.jpg" alt="Puma T-Shirt For Men" />
+                <span class="rating-badge"
+                  ><i class="fas fa-star"></i> 4.4</span
+                >
+              </div>
+              <div class="product-details">
+                <p class="product-name">Puma T-Shirt For Men</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 1199</span>
+                  <span class="current-price">Rs. 640</span>
+                  <span class="discount-text">47% OFF</span>
+                </div>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+              <div class="image-wrapper">
+                <img
+                  src="assets/black-shoes.jpg"
+                  alt="Reebok Men Black Running Shoes"
+                />
+                <span class="rating-badge"
+                  ><i class="fas fa-star"></i> 4.6</span
+                >
+              </div>
+              <div class="product-details">
+                <p class="product-name">Reebok Men Black Running Shoes</p>
+                <div class="price-row">
+                  <span class="old-price">Rs. 2499</span>
+                  <span class="current-price">Rs. 1250</span>
+                  <span class="discount-text">50% OFF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="view-more-container">
+            <button class="view-more-btn">View More</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-links-grid">
+          <div class="footer-column">
+            <h3>POLICY INFO</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Sale</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Report Abuse & Takedown Policy</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>COMPANY</h3>
+            <ul>
+              <li><a href="#">Impact@Snapdeal</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>SNAPDEAL BUSINESS</h3>
+            <ul>
+              <li><a href="#">Shopping App</a></li>
+              <li><a href="#">Sell on Snapdeal</a></li>
+              <li><a href="#">Media Enquiries</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>POPULAR LINKS</h3>
+            <ul>
+              <li><a href="#">Lehenga</a></li>
+              <li><a href="#">Kid's Clothing</a></li>
+              <li><a href="#">Sarees</a></li>
+              <li><a href="#">Winter Wear</a></li>
+            </ul>
+          </div>
+          <div class="footer-column subscribe-col">
+            <h3>SUBSCRIBE</h3>
+            <div class="subscribe-box">
+              <input type="email" placeholder="Your email address" />
+              <button>SUBSCRIBE</button>
+            </div>
+            <p class="subscribe-help">
+              Register now to get updates on promotions and coupons.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div class="payment-methods">
+            <span>PAYMENT</span>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-discover"></i>
+          </div>
+          <div class="social-links">
+            <span>CONNECT</span>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
